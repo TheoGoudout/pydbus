@@ -101,7 +101,7 @@ class ObjectWrapper(ExitableWithAliases("unwrap")):
 			logger = logging.getLogger(__name__)
 			logger.exception("Exception while handling %s.%s()", interface_name, method_name)
 
-			invocation.return_dbus_error(DBusException.dbus_name, "Uncought exception while handling.")
+			invocation.return_dbus_error(DBusException.dbus_name, "Uncaught exception while handling.")
 			raise e
 
 	def Get(self, interface_name, property_name):
